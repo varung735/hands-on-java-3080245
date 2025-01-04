@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class DataSource {
 
@@ -39,7 +40,7 @@ public class DataSource {
             resultSet.getInt("account_id"));
         }
 
-      } catch(Exception e) {
+      } catch(SQLException e) {
       e.printStackTrace();
     }
 
@@ -62,7 +63,7 @@ public class DataSource {
             resultSet.getInt("balance"));
         }
 
-      } catch(Exception e) {  
+      } catch(SQLException e) {  
         e.printStackTrace();
       }
 
